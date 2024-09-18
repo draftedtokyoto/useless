@@ -1,0 +1,16 @@
+getgenv().INTheme = ("Blue") -- Red , Blue , Pink
+-- Toggle Key is Right Control
+loadstring(game:HttpGet("https://raw.githubusercontent.com/draftedtokyoto/YKI-INT/main/YKI-InternalXC"))()
+
+
+-- To Store a script create a unused variable.
+-- Store ur script using [[ Script Here ]]
+local Script1 = [[
+print("works!")
+]]
+
+-- Seen below use the same format. Just like a UI Library
+
+StoreScript("Print", -- Script Name
+Script1 -- Script that is Executed When you press the button.
+)
