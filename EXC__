@@ -1,0 +1,150 @@
+
+function GetThemeColor()
+	if getgenv().INTheme == ("Red") then 
+		return Color3.fromRGB(171, 70, 72)
+	elseif getgenv().INTheme == ("Blue") then
+		return Color3.fromRGB(130, 111, 236)
+	elseif getgenv().INTheme == ("Pink") then
+		return Color3.fromRGB(157, 5, 86)
+	end
+end
+
+function GetImageIdTheme()
+	if getgenv().INTheme == ("Red") then 
+		return "http://www.roblox.com/asset/?id=17587669693"
+	elseif getgenv().INTheme == ("Blue") then 
+		return "http://www.roblox.com/asset/?id=14471701414"
+	elseif getgenv().INTheme == ("Pink") then 
+		return "http://www.roblox.com/asset/?id=11008731608"
+	end
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextBox = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Frame_3 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.241169304, 0, 0.558823526, 0)
+Frame.Size = UDim2.new(0, 401, 0, 205)
+Frame.Style = Enum.FrameStyle.RobloxSquare
+Frame.Draggable = true
+Frame.Active = true
+Frame.Selectable = true
+
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 32343.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.374211729, 0, 0.0168471169, 0)
+ImageLabel.Size = UDim2.new(0, 99, 0, 57)
+ImageLabel.Image = GetImageIdTheme()
+ImageLabel.ImageTransparency = 0.500
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(240, 0, 16)
+TextBox.BackgroundTransparency = 5.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0473815463, 0, 0.278048784, 0)
+TextBox.Size = UDim2.new(0, 250, 0, 127)
+TextBox.Font = Enum.Font.Unknown
+TextBox.Text = [[ print("Kabenos World") ]] 
+TextBox.TextColor3 = GetThemeColor()
+TextBox.TextSize = 10
+TextBox.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 6.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0525674783, 0, -0.0426625311, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Yukio - INT*"
+TextLabel.TextColor3 = GetThemeColor()
+TextLabel.TextSize = 21
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(185, 0, 3)
+Frame_2.BackgroundTransparency = 0.990
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.67973429, 0, 0.0107935462, 0)
+Frame_2.Size = UDim2.new(0, 128, 0, 184)
+
+
+
+UIListLayout.Parent = Frame_2
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIAspectRatioConstraint.Parent = Frame_2
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(143, 2, 72)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.666841149, 0, -0.0303828549, 0)
+Frame_3.Size = UDim2.new(0, 1, 0, 194)
+
+UICorner.CornerRadius = UDim.new(0.112)
+UICorner.Parent = Frame
+
+
+TextBox.FocusLost:Connect(function()
+	loadstring(TextBox.Text)()
+end)
+
+local UserInputService = game:GetService("UserInputService")
+
+
+UserInputService.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.RightControl then
+		if Frame.Visible then
+			Frame.Visible = false
+		else
+			Frame.Visible = true
+		end
+	end
+end)
+
+
+function StoreScript(name,callback)
+	writefile(name..".SC",callback)
+	TextButton.Parent = Frame_2
+	TextButton.BackgroundColor3 = Color3.fromRGB(61, 0, 8)
+	TextButton.BackgroundTransparency = 0.700
+	TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton.BorderSizePixel = 0
+	TextButton.Position = UDim2.new(0.09375, 0, 0, 0)
+	TextButton.Size = UDim2.new(0, 104, 0, 24)
+	TextButton.Font = Enum.Font.SourceSans
+	TextButton.Text = name
+	TextButton.TextColor3 = GetThemeColor()
+	TextButton.TextSize = 14.000
+
+
+
+	TextButton.MouseButton1Down:Connect(function()
+		loadstring(readfile(name..".SC"))()
+	end)
+end
