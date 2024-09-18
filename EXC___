@@ -1,0 +1,214 @@
+getgenv().InternalColor = ("Pink") 
+
+function GetColor()
+	if getgenv().InternalColor == ("Red") then 
+		return Color3.fromRGB(216, 0, 4)
+	end
+    if getgenv().InternalColor == ("Pink") then 
+		return Color3.fromRGB(255, 0, 144)
+	end
+    if getgenv().InternalColor == ("Blue") then 
+		return Color3.fromRGB(0, 0, 255)
+	end
+    if getgenv().InternalColor == ("Yellow") then 
+		return Color3.fromRGB(221, 232, 3)
+	end
+    if getgenv().InternalColor == ("Black") then 
+		return Color3.fromRGB(0, 0, 0)
+	end
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UIToolsGradient = Instance.new("UIGradient")
+local TextBox = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local Framea = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+
+
+--Properties:
+
+ScreenGui.Parent = game:GetService("CoreGui")
+
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = GetColor()
+Frame.BackgroundTransparency = 0.344
+Frame.BorderColor3 = GetColor()
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.369171172, 0, 0.465000004, 0)
+Frame.Size = UDim2.new(0, 459, 0, 209)
+
+UIToolsGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 0, 127)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 85, 127))}
+UIToolsGradient.Name = "UIToolsGradient"
+UIToolsGradient.Parent = Frame
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = GetColor()
+TextBox.BackgroundTransparency = 0.800
+TextBox.BorderColor3 = GetColor()
+TextBox.BorderSizePixel = 2
+TextBox.Position = UDim2.new(0.013049054, 0, 0.153110042, 0)
+TextBox.Size = UDim2.new(0.727276325, 0, 0.846889853, 0)
+TextBox.PlaceholderColor3 = Color3.fromRGB(130, 105, 255)
+TextBox.PlaceholderText = "print(\"Hello World\")"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(130, 105, 255)
+TextBox.TextSize = 9
+TextBox.TextStrokeTransparency = 0.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundTransparency = 9.000
+TextLabel.Position = UDim2.new(0.363834411, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.270152509, 0, 0.153110042, 0)
+TextLabel.Font = Enum.Font.Arimo
+TextLabel.Text = "Yukio  * INT"
+TextLabel.TextColor3 = Color3.fromRGB(98, 154, 193)
+TextLabel.TextSize = 14.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = GetColor()
+Frame_2.BackgroundTransparency = 0.800
+Frame_2.BorderColor3 = GetColor()
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.740325451, 0, 0, 0)
+Frame_2.Size = UDim2.new(0, 1, 0, 208)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = GetColor()
+TextLabel_2.BackgroundTransparency = 555.000
+TextLabel_2.BorderColor3 = GetColor()
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.750526428, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 111, 0, 23)
+TextLabel_2.Font = Enum.Font.Arimo
+TextLabel_2.Text = "Scripts"
+TextLabel_2.TextColor3 = Color3.fromRGB(98, 154, 193)
+TextLabel_2.TextSize = 14.000
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = GetColor()
+Frame_3.BackgroundTransparency = 0.800
+Frame_3.BorderColor3 = GetColor()
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.744953513, 0, 0.110047847, 0)
+Frame_3.Size = UDim2.new(0, 118, 0, 1)
+
+Framea.Parent = Frame
+Framea.BackgroundColor3 = GetColor()
+Framea.BackgroundTransparency = 9.000
+Framea.BorderColor3 = GetColor()
+Framea.BorderSizePixel = 0
+Framea.Position = UDim2.new(0.738783121, 0, 0.129186675, 0)
+Framea.Size = UDim2.new(0, 120, 0, 182)
+
+UIListLayout_2.Parent = Framea
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = GetColor()
+TextLabel_3.BackgroundTransparency = 555.000
+TextLabel_3.BorderColor3 = GetColor()
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.12017253, 0, 0.0191387553, 0)
+TextLabel_3.Size = UDim2.new(0, 111, 0, 23)
+TextLabel_3.Font = Enum.Font.Arimo
+TextLabel_3.Text = "⭐"
+TextLabel_3.TextColor3 = Color3.fromRGB(98, 154, 193)
+TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundTransparency = 9.000
+TextLabel_4.Position = UDim2.new(99999, 0, 99999, 0)
+TextLabel_4.Size = UDim2.new(0.270152509, 0, 0.153110042, 0)
+TextLabel_4.Font = Enum.Font.Arimo
+TextLabel_4.Text = "[ Active ]"
+TextLabel_4.TextColor3 = Color3.fromRGB(98, 154, 193)
+TextLabel_4.TextSize = 14.000
+
+-- Scripts:
+
+local function SPXNUS_fake_script() -- TextLabel.Script (READ ME) 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	--place this script INSIDE the gui instance you want to move/resize
+
+	local TweenService = game:GetService("TweenService") --gets tweenService
+	local tweenInstance = script.Parent --the gui you want to move/resize
+
+	local tweenInfo = TweenInfo.new(1.2,Enum.EasingStyle.Quart,Enum.EasingDirection.Out,0) -- creates the tweens info (if you want it to repeat, change the 0 to how many times it should repeat.)
+
+	local tween = TweenService:Create(tweenInstance, tweenInfo, {Position = UDim2.new({0.364, 0},{0, 0})}) --creates the tween
+
+	tween:Play() --plays the tween
+
+	--thanks for using My Tween Tool, leave a comment under this plugin if you have any questions or wanna report a bug. :)
+
+end
+coroutine.wrap(SPXNUS_fake_script)()
+local function NMPE_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+
+	frame.Active = true
+	frame.Visible = true
+	frame.Draggable = true
+	frame.Selectable = true
+
+end
+coroutine.wrap(NMPE_fake_script)()
+local function SOKUSQF_fake_script() -- TextLabel_4.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_4)
+
+	script.Parent:TweenPosition(UDim2.new(0.191, 0,-0.004, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear)
+end
+coroutine.wrap(SOKUSQF_fake_script)()
+
+
+TextBox.FocusLost:Connect(function()
+	loadstring(TextBox.Text)()
+end)
+
+TextBox.FocusLost:Connect(function()
+	wait()
+	TextBox.PlaceholderText = "Yukio INT."
+	TextBox.Text = ""
+end)
+
+TextBox.Focused:Connect(function()
+	TextBox.PlaceholderText = "Waiting for your dumb ass fucking script."
+end)
+
+function StoreScript(Name,Callback)
+	writefile(Name..".SC",Callback)
+	local TextButton = Instance.new("TextButton")
+	TextButton.Parent = Framea
+	TextButton.BackgroundColor3 = GetColor()
+	TextButton.BackgroundTransparency = 0.800
+	TextButton.BorderColor3 = GetColor()
+	TextButton.BorderSizePixel = 0
+	TextButton.Size = UDim2.new(0, 120, 0, 14)
+	TextButton.Font = Enum.Font.SourceSans
+	TextButton.TextColor3 = Color3.fromRGB(255,255,255)
+	TextButton.TextSize = 14.000
+	TextButton.Text = Name
+	TextButton.MouseButton1Down:Connect(function()
+		loadstring(readfile(Name..".SC"))()
+	end)
+
+end
+
+
+
+local ScriptToBeStored = [[loadstring(game:HttpGet("https://pastebin.com/raw/YMxgqJDA"))()]] -- Can be Obsfucated, Doesnt Matter.
+StoreScript("Kyro",ScriptToBeStored)
